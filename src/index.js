@@ -312,6 +312,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles.css";
+// import PropTypes from "prop-types";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -363,28 +365,51 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   );
 // }
 
-function Panel({ children }) {
-  return (
-    <div>
-      <h1>Panel</h1>
-      {children}
-    </div>
-  );
-}
+// function Panel({ children }) {
+//   return (
+//     <div>
+//       <h1>Panel</h1>
+//       {children}
+//     </div>
+//   );
+// }
 
-function User(params) {
-  return <p>User</p>;
-}
+// function User(params) {
+//   return <p>User</p>;
+// }
 
-function App() {
-  return (
-    <div>
-      <Panel>
-        <User />
-        <p>mozna tez dodac cos tak</p>
-      </Panel>
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Panel>
+//         <User />
+//         <p>mozna tez dodac cos tak</p>
+//       </Panel>
+//     </div>
+//   );
+// }
+
+// function User({ name, surname }) {
+//   return (
+//     <p>
+//       User {name}
+//       {surname}
+//     </p>
+//   );
+// }
+// User.propTypes = {
+//   name: PropTypes.string,
+//   x: PropTypes.number.isRequired,
+// };
+// function App() {
+//   return (
+//     <div>
+//       <User name="Michal" x={2} />
+//       <User name="Mija" />
+//       <User surname="Cziczi" />
+//       <User name="Ada" />
+//     </div>
+//   );
+// }
 
 root.render(<App />);
