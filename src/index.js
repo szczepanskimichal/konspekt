@@ -315,18 +315,76 @@ import "./styles.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const powitanie = "Witaj";
+// function Header() {
+//   return (
+//     <header>
+//       <h1>React</h1>
+//     </header>
+//   );
+// }
+// function Main() {
+//   return (
+//     <main>
+//       <p>React is a JavaScript library for building user interfaces.</p>
+//     </main>
+//   );
+// }
 
-function generatedId(id) {
-  return "moje" + id;
+// function Footer() {
+//   return (
+//     <footer>
+//       <p>
+//         <a href="https://reactjs.org">reactjs.org</a>
+
+//         <p>I TO JEST ZAJEBISTE</p>
+//       </p>
+//     </footer>
+//   );
+// }
+
+// function Post({ name = "Michal", surname }) {
+//   return (
+//     <div>
+//       <h1>{name}</h1>
+//       <h2>{surname}</h2>
+//     </div>
+//   );
+// }
+
+// function App() {
+//   return (
+//     <div>
+//       {/* <Header />
+//       <Main />
+//       <Footer /> */}
+//       <Post name="Mija" surname="Cziczi" tab={[1, 2, 3, 4]} />
+//       <Post surname="Szczepanski" tab={[1, 2, 3, 4]} />
+//     </div>
+//   );
+// }
+
+function Panel({ children }) {
+  return (
+    <div>
+      <h1>Panel</h1>
+      {children}
+    </div>
+  );
 }
 
-const text = <p> Jakis przykladowy tekscik</p>;
-const user = { name: "Mija" };
-root.render(
-  <h1 id={generatedId("cokolwiek")}>
-    {text} Hello, {powitanie.toUpperCase()}
-    <span> {user.name}</span>
-  </h1>
-);
-export default text;
+function User(params) {
+  return <p>User</p>;
+}
+
+function App() {
+  return (
+    <div>
+      <Panel>
+        <User />
+        <p>mozna tez dodac cos tak</p>
+      </Panel>
+    </div>
+  );
+}
+
+root.render(<App />);
