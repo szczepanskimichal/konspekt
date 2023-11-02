@@ -33,7 +33,9 @@ function App() {
   return (
     <>
       <Button variant="info">Info</Button>
-      <Button variant="warrning">Warrning</Button>
+      <Button variant="warrning" outline>
+        Warrning
+      </Button>
       <Button variant="danger">Danger</Button>
     </>
   );
