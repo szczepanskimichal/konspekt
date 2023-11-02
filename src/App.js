@@ -27,12 +27,14 @@
 // ------------------------------------------------
 
 import React from "react";
-import Button from "./components/Button";
+import Button from "./components/Button/Button";
 
 function App() {
   return (
     <>
-      <Button />
+      <Button variant="info">Info</Button>
+      <Button variant="warrning">Warrning</Button>
+      <Button variant="danger">Danger</Button>
     </>
   );
 }
