@@ -14,5 +14,5 @@ import clsx from "clsx";
 // }
 
 export default function Button({ children, variant, outline }) {
-  return <div className={CSS.button}>{children}</div>;
+  return <div className={CSS[variant]}>{children}</div>;
 }

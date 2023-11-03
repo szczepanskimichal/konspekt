@@ -10,7 +10,21 @@ body {
   align-items: center;
   height: 100vh;
 }
-.test {
-  background-color: aqua;
-  color: blueviolet;
+.button {
+  color: pink;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+.button.info {
+  background-color: blue;
+}
+.button.warrning {
+  background-color: yellow;
+}
+.button.danger {
+  background-color: red;
+}
+.button.outline {
+  outline: 1px solid black;
 }

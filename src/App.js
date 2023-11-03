@@ -26,18 +26,32 @@
 
 // ------------------------------------------------
 
+// import React from "react";
+// import Button from "./components/Button/Button";
+
+// function App() {
+//   return (
+//     <>
+//       <Button variant="info">Info</Button>
+//       <Button variant="warrning" outline>
+//         Warrning
+//       </Button>
+//       <Button variant="danger">Danger</Button>
+//     </>
+//   );
+// }
+// export default App;
+
+// ------------------------------------------------
+
 import React from "react";
-import Button from "./components/Button/Button";
+import Test from "./components/Test/Test";
 
 function App() {
   return (
-    <>
-      <Button variant="info">Info</Button>
-      <Button variant="warrning" outline>
-        Warrning
-      </Button>
-      <Button variant="danger">Danger</Button>
-    </>
+    <div>
+      <Test x={9} />
+    </div>
   );
 }
 export default App;
