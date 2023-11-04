@@ -45,13 +45,12 @@
 // ------------------------------------------------
 
 import React from "react";
-import Test from "./components/Test/Test";
+import Form from "./components/Form/Form";
 
 function App() {
-  return (
-    <div>
-      <Test x={9} />
-    </div>
-  );
+  return <Form />;
+  // <div>
+  //   <Test x={9} />
+  // </div>
 }
 export default App;
