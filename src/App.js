@@ -45,7 +45,7 @@
 // ------------------------------------------------
 
 import React from "react";
-import Form from "./components/Lifecycle/Lifecycle";
+import Form from "./components/Hooks/Hooks";
 
 function App() {
   return <Form />;
