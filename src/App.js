@@ -9,7 +9,7 @@
 // }
 // export default App;
 
-import Test2 from "./components/Test/Test2";
+import Test2 from "../components/Test/Test2";
 import { ThemContext } from "./hooks/useTheme";
 
 const App = () => {
