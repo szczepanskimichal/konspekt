@@ -1,56 +1,23 @@
 // import React from "react";
-// import Header from "./components/Header";
+// import Form from "./components/Characters/Characters";
 
 // function App() {
-//   return (
-//     <div>
-//       <Header />
-//     </div>
-//   );
+//   return <Form />;
+//   // <div>
+//   //   <Test x={9} />
+//   // </div>
 // }
 // export default App;
 
-// import React from "react";
-// import Header from "./components/Header";
+import Test2 from "./components/Test/Test2";
+import { ThemContext } from "./hooks/useTheme";
 
-// function App() {
-//   const isLoggedIn = false;
-//   return (
-//     <>
-//       <p>{isLoggedIn ? <span>Logged in</span> : <a>Logg in</a>}</p>
-//     </>
-//   );
-// }
+const App = () => {
+  return (
+    <ThemContext.Provider value={"dark"}>
+      <Test2 />
+    </ThemContext.Provider>
+  );
+};
 
-// export default App;
-
-// ------------------------------------------------
-
-// import React from "react";
-// import Button from "./components/Button/Button";
-
-// function App() {
-//   return (
-//     <>
-//       <Button variant="info">Info</Button>
-//       <Button variant="warrning" outline>
-//         Warrning
-//       </Button>
-//       <Button variant="danger">Danger</Button>
-//     </>
-//   );
-// }
-// export default App;
-
-// ------------------------------------------------
-
-import React from "react";
-import Form from "./components/Hooks/Hooks";
-
-function App() {
-  return <Form />;
-  // <div>
-  //   <Test x={9} />
-  // </div>
-}
 export default App;

@@ -1,40 +1,39 @@
-import React, { Component } from "react";
+import { useState, useEffect } from "react";
+import { useRandomColor } from "../../hooks/useRandomColor";
 
-function Child({ user, foo }) {
-  const handleClick = () => {
-    foo(" message to parent from child", user);
-  };
+// function getRandomeColor() {
+//   var letters = "0123456789ABCDEF";
+//   var color = "#";
+//   for (var i = 0; i < 6; i++) {
+//     color += letters[Math.floor(Math.random() * 16)];
+//   }
+//   return color;
+// }
+
+export default function Test() {
+  const { color, changeColor } = useRandomColor();
+  // const [color, setColor] = useState("#000");
+
+  // const changeColor = () => {
+  //   setColor(getRandomeColor());
+  // };
+
+  useEffect(() => {
+    console.log("On mount");
+  }, []);
+
   return (
-    <div>
-      {user} - <button onClick={foo}>REMOVE</button>
-    </div>
+    <>
+      <div
+        style={{
+          backgroundColor: color,
+          height: 100,
+          width: 100,
+        }}
+      />
+      <button onClick={changeColor} variant="contained" color="primary">
+        Change color
+      </button>
+    </>
   );
 }
-
-class Parent extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      list: ["ada", "mija", "michal"],
-    };
-  }
-
-  send = (msg) => {
-    console.log("message from parent");
-  };
-
-  render() {
-    console.log("render parent");
-    const { list } = this.state;
-    return (
-      <>
-        {list.map((user) => (
-          <Child key={user} user={user} foo={this.send} />
-        ))}
-      </>
-    );
-  }
-}
-
-export default Parent;
