@@ -8,15 +8,16 @@
 //   // </div>
 // }
 // export default App;
-
-import Test2 from "../components/Test/Test2";
-import { ThemContext } from "./hooks/useTheme";
+import React from "react";
+import Test2 from "../src/components/Test/Test2";
+// import { ThemContext } from "./hooks/useTheme";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 const App = () => {
   return (
-    <ThemContext.Provider value={"dark"}>
+    <ThemeProvider>
       <Test2 />
-    </ThemContext.Provider>
+    </ThemeProvider>
   );
 };
 
