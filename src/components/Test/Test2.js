@@ -9,7 +9,7 @@ function Child() {
   return (
     <div>
       Child - {theme}
-      <Button onClick={() => changeTheme("light")}>Light</Button>
+      <button onClick={() => changeTheme("light")}>Light</button>
     </div>
   );
 }
